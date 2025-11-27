@@ -1,5 +1,5 @@
 // Import deployed contract information
-import deployment from '../../../deployments/sepolia/EncryptedPolls.json';
+import deployment from '../contracts/EncryptedPolls.json';
 
 export const CONTRACT_ADDRESS = deployment.address;
 export const CONTRACT_ABI = deployment.abi;
