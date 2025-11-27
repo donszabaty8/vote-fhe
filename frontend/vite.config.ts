@@ -32,7 +32,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [],
+      // Treat Safe packages as external - we don't use them
+      external: (id) => {
+        return id.includes('@safe-global') || id.includes('@safe-globalThis');
+      },
       output: {
         manualChunks: undefined,
       },
