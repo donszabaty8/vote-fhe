@@ -81,7 +81,9 @@
     "chain": "hardhat node --network hardhat --no-deploy",
     "deploy:localhost": "hardhat deploy --network localhost",
     "deploy:sepolia": "hardhat deploy --network sepolia",
-    "verify:sepolia": "hardhat verify --network sepolia"
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "demo:btc": "cross-env TS_NODE_PROJECT=tsconfig.json ts-node --transpile-only scripts/runBtcPoll.ts",
+    "test:decrypt": "cross-env TS_NODE_PROJECT=tsconfig.json ts-node --transpile-only scripts/testUserDecryption.ts"
   },
   "overrides": {
     "ws@>=7.0.0 <7.5.10": ">=7.5.10",
